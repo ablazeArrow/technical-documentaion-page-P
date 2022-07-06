@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  height: auto;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+nav#navbar {
+  width: 25%;
+  max-width: 500px;
+  min-width: 300px;
+  height: 100vh;
+  border-right: 5px solid #ccc;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  color: #01a6cf;
+  max-width: 100%;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li {
+  width: 100%;
+  border-top: 1px solid #01a6cf77;
+}
+
+#navbar ul li .nav-link {
+  color: #fff;
+  font-size: 1em;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#navbar ul .nav-link:hover {
+  color: #01a6cf;
+}
+
+#navbar ul .nav-link:active {
+  background-color: #01a6cf;
+  color: #fff;
+}
+
+#main-doc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: calc(100% - 25%);
+}
+.main-section {
+  width: 95%;
+  margin: auto;
+  padding: 0 15px;
+}
+
+h2 {
+  text-align: left;
+  width: 100%;
+  padding: 10px 0 10px;
+  margin: 50px auto 15px;
+}
+
+p {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  line-height: 1.6;
+}
+
+h2:first-of-type {
+  border-bottom: 5px solid #01a6cf;
+}
+
+p:first-of-type {
+  margin-top: 25px;
+}
+
+.main-section ul,
+ol {
+  margin: 25px 0;
+}
+
+.main-section li {
+  font-size: 0.9em;
+  margin: 15px 0;
+}
+
+pre {
+  padding: 10px;
+  background-color: #141b1f;
+}
+code {
+  width: 100%;
+  color: whitesmoke;
+}
+
+#reference a {
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #01a6cf;
+}
+
+#reference a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav#navbar {
+    min-width: 100%;
+    height: auto;
+  }
+
+  #navbar ul .nav-link a {
+    text-align: center;
+  }
+
+  #navbar ul {
+    height: 15px;
+    overflow: hidden;
+  }
+
+  #navbar ul:hover {
+    height: auto;
+  }
+
+  #main-doc {
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    padding: 5px 0 5px;
+    margin: 10px auto 5px;
+    font-size: 1.2em;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 0.9em;
+  }
+
+  .main-section ul,
+  ol {
+    margin: 5px 0;
+  }
+
+  .main-section li {
+    font-size: 0.8em;
+    margin: 10px 0;
+  }
+}
